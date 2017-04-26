@@ -112,8 +112,8 @@ import { NgBoxService } from './ngbox.service';
         }
         #closeButton, #closeButton:focus {
             position: absolute;
-            bottom: 620px;
-            right: 0px;
+            bottom: 715px;
+            right: -11px;
             cursor: pointer;
             color: #11cd55;
             background-color: #FFF;
@@ -139,6 +139,21 @@ import { NgBoxService } from './ngbox.service';
             margin-top: -42px;
             cursor: pointer;
             top: 50%;
+        }
+         @media (max-width: 768px) {
+            #closeButton{
+                bottom: 520px;
+            }
+        }
+         @media (max-width: 430px) {
+            #closeButton{
+                bottom: 260px !important;
+            }
+        }
+        @media (max-width: 375px) {
+            #closeButton{
+                bottom: 220px !important;
+            }
         }
     `]
 })
