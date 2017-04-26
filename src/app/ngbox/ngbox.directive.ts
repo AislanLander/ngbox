@@ -52,7 +52,7 @@ export class NgBoxDirective implements AfterViewInit, OnDestroy {
             if (match && match[2].length === 11) {
                 return {
                     id: this.id,
-                    url: this.sanitizer.bypassSecurityTrustResourceUrl(match[0]),
+                    url: this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/' + match[2] + '?autoplay=1' + '&controls=0'),
                     type: 2,
                     title: this.title,
                     width: this.width ? this.width : 640,
