@@ -1,0 +1,79 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "ngbox",
+        "scope": null,
+        "escapedName": "ngbox",
+        "name": "ngbox",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "c:\\ActuarDev\\Trei.no\\ng2"
+    ]
+  ],
+  "_from": "ngbox@latest",
+  "_id": "ngbox@0.0.15",
+  "_inCache": true,
+  "_location": "/ngbox",
+  "_nodeVersion": "7.8.0",
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/ngbox-0.0.15.tgz_1492059210566_0.36044025188311934"
+  },
+  "_npmUser": {
+    "name": "mixalistzikas",
+    "email": "mixalistzikas@gmail.com"
+  },
+  "_npmVersion": "4.2.0",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "ngbox",
+    "scope": null,
+    "escapedName": "ngbox",
+    "name": "ngbox",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/ngbox/-/ngbox-0.0.15.tgz",
+  "_shasum": "105bf5192e08a8bdb65b85d43aa3f8c5f34a98f1",
+  "_shrinkwrap": null,
+  "_spec": "ngbox",
+  "_where": "c:\\ActuarDev\\Trei.no\\ng2",
+  "dependencies": {},
+  "description": "ngBox is the first angular 2 module used to overlay images, videos and iframes on the current page.",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "105bf5192e08a8bdb65b85d43aa3f8c5f34a98f1",
+    "tarball": "https://registry.npmjs.org/ngbox/-/ngbox-0.0.15.tgz"
+  },
+  "homepage": "http://ngmodules.eu/",
+  "keywords": [
+    "angular2",
+    "colorbox",
+    "typescript",
+    "lightbox",
+    "ng",
+    "angular"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "mixalistzikas",
+      "email": "mixalistzikas@gmail.com"
+    }
+  ],
+  "name": "ngbox",
+  "optionalDependencies": {},
+  "readme": "## install npm package\n`npm install ngbox@latest -i`\n\n\n##github\n[Source Code](https://github.com/mixalistzikas/ngbox)\n\n## app.module.ts\n\nAdd the following imports to your app.module.ts\n\n`import { NgBoxModule } from 'ngbox/ngbox.module'`;\n\n`import { NgBoxService } from 'ngbox/ngbox.service'`;\n\n`import { CommonModule } from '@angular/common'`;\n\nAdd to imports `NgBoxModule, BrowserModule, CommonModule`\n\nAdd to services `NgBoxService`\n\n## app.component.html\n\nAdd this at the top `<ngbox></ngbox>` of your root html file.\n\n## ngBox\n\nAdd `ng-box` to your image or to your links. The required param is `src` or `href`\n\n## Demo url\n\n[Demo](http://ngmodules.eu/)\n\n## Examples\n\n`<p><a href=\"http://placehold.it/500x500?text=Image 1.1\" [image]=\"true\" title=\"Image 1.1\" ng-box>Image 1.1</a></p>`\n\n`<p><a href=\"http://placehold.it/500x500?text=Image 1.2\" [image]=\"true\" title=\"Image 1.2\" ng-box>Image 1.2</a></p>`\n\n`<p><a href=\"http://placehold.it/500x500?text=Image 1.3\" [image]=\"true\" title=\"Image 1.3\" ng-box>Image 1.3</a></p>`\n\n`<h4>Videos</h4>`\n`<p><a href=\"\" ng-box group=\"videos\" href=\"https://www.youtube.com/embed/L3wKzyIN1yk\" title=\"Video Youtube\">Youtube.com</a></p>`\n\n`<p><a href=\"\" ng-box group=\"videos\" src=\"https://vimeo.com/43338103\">Vimeo.com</a></p>`\n\n## Attributes\n `src` or `href` (The source file/video/link as a string)\n \n `[src]` or `[href]` (The source file/video/link as a variable)\n \n \n `group=\"myGroup\"` (grouping as a string)\n \n `[group]=\"group\"` (grouping as a variable)\n \n `[image]=\"true\"` (if the path or the source has .jpg or .png it will open automatically, if not then you need to specify that this source is an image)\n \n `[width]=\"800\" [height]=\"800\"`\n \n `title=\"This is a title\"`\n \n `[cache]=\"true\"` (if you want to preload an image)",
+  "readmeFilename": "README.md",
+  "scripts": {},
+  "version": "0.0.15"
+}
