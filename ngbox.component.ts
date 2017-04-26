@@ -16,6 +16,15 @@ import { NgBoxService } from './ngbox.service';
                      [hidden]="ngBox.loading" 
                      (click)="nextNgBox()"
                      alt="">
+                     
+                     <div #ngBoxButtons id="buttons" [hidden]="ngBox.loading">
+                <p>
+                    <span class="title" *ngIf="ngBox.current.title">{{ngBox.current.title}}<br/></span>
+                    <span class="pages" *ngIf="getHasGroup()">{{getCurrentIndex()}} of {{getCount()}}</span>
+                </p>
+                <a (click)="closeNgBox()" id="closeButton">x</a>
+            </div>
+            
                 <iframe *ngIf="ngBox.current.type == 2" 
                         #ngBoxContent
                         [src]="ngBox.current.url"
@@ -43,13 +52,7 @@ import { NgBoxService } from './ngbox.service';
                         allowfullscreen>
                 </iframe>
             </div>
-            <div #ngBoxButtons id="buttons" [hidden]="ngBox.loading">
-                <p>
-                    <span class="title" *ngIf="ngBox.current.title">{{ngBox.current.title}}<br/></span>
-                    <span class="pages" *ngIf="getHasGroup()">{{getCurrentIndex()}} of {{getCount()}}</span>
-                </p>
-                <a (click)="closeNgBox()" id="closeButton">x</a>
-            </div>     
+                 
         </div>
     `,
     styles: [`
@@ -64,7 +67,7 @@ import { NgBoxService } from './ngbox.service';
             font-size: 20px;
         }
         #ngBoxWrapper {
-            background-color: rgba(0, 0, 0, 0.9);
+            background-color: rgba(0, 0, 0, 0.4);
             position: fixed;
             top: 0px;
             left: 0px;
@@ -91,7 +94,15 @@ import { NgBoxService } from './ngbox.service';
         iframe {
             max-width: 100%;
             max-height: 100%;
-        }
+            height: 32vw;
+            width: 75vw;            
+        }                      
+        @media (max-width: 1024px) {
+                iframe {
+                    height: 40vw;
+                    width: 93vw;
+                }
+        }        
         #buttons{
             position: relative;
             margin: 5px auto;
@@ -112,8 +123,7 @@ import { NgBoxService } from './ngbox.service';
         }
         #closeButton, #closeButton:focus {
             position: absolute;
-            bottom: 715px;
-            right: -11px;
+            right: -15px;
             cursor: pointer;
             color: #11cd55;
             background-color: #FFF;
@@ -142,7 +152,8 @@ import { NgBoxService } from './ngbox.service';
         }
          @media (max-width: 768px) {
             #closeButton{
-                bottom: 520px;
+                /*bottom: 520px;*/
+                right: -5px;
             }
         }
          @media (max-width: 430px) {
