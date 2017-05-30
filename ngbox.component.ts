@@ -257,6 +257,9 @@ export class NgBoxComponent implements DoCheck {
 
     @HostListener('window:keydown', ['$event'])
     checkKeyPress(event: KeyboardEvent) {
+        if (!this.ngBox.current || typeof this.ngBox.current == 'undefined') {
+        return
+      }
         if (event.keyCode === 39) {
             this.nextNgBox();
         } else if (event.keyCode === 37) {
